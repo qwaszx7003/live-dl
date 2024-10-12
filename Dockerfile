@@ -1,4 +1,5 @@
-FROM python:3.8.5-alpine
+#FROM python:3.8.5-alpine
+FROM python3.13.0-alpine
 
 WORKDIR /app
 
@@ -20,6 +21,7 @@ RUN apk update -f \
     ffmpeg \
     jq \
     && rm -rf /var/cache/apk/*
+    && apk upgrade --available && sync
 
 RUN pip install --no-cache-dir --upgrade streamlink yq yt-dlp
 
