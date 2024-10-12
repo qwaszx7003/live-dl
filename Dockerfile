@@ -20,7 +20,7 @@ RUN apk update -f \
     exiv2 \
     ffmpeg \
     jq \
-    && rm -rf /var/cache/apk/*
+    && rm -rf /var/cache/apk/* \
     && apk upgrade --available && sync
 
 RUN pip install --no-cache-dir --upgrade streamlink yq yt-dlp
