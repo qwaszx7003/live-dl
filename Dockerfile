@@ -1,5 +1,5 @@
 #FROM python:3.8.5-alpine
-FROM python:3.9.21-alpine3.21
+FROM python:3.9.20-alpine
 
 WORKDIR /app
 
