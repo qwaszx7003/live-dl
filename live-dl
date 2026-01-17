@@ -1300,9 +1300,8 @@ function func_download_youtube() {
         --hls-playlist-reload-attempts 30 \
         --hls-live-edge 5 \
         --stream-timeout 90 \
-        --ringbuffer-size 512M \
+        --ringbuffer-size 256M \
         --loglevel trace \
-        --player-continuous-http \
         $STREAMLINK_ARGS -o "$OUTPUT_PATH.ts" \
         "${WEBPAGE_URL}" best >> "$OUTPUT_PATH.log" 2>&1
     fi
